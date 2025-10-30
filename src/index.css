@@ -1,0 +1,194 @@
+.register-container,
+.login-container {
+    font-family: Arial, sans-serif;
+    font-size: 150%;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: url("./assets/registerBg.jpg");
+    background-size: cover;
+}
+
+.register-container .register-window,
+.login-container .login-window {
+    display: flex;
+    flex-direction: column;
+    background: rgba(29, 29, 29, 0.3);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    padding: 40px 30px;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.register-container .register-window h2,
+.login-container .login-window h2 {
+    color: hsl(187, 100%, 50%);
+    font-size: 2.25em;
+}
+
+.info-input-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 15px 20px;
+}
+
+.register-container .register-window input,
+.login-container .login-window input {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid hsl(187, 100%, 50%);
+    color: white;
+    font-size: 0.7em;
+    width: 20vw;
+    height: 35px;
+}
+
+.register-container .register-window input::placeholder,
+.login-container .login-window input::placeholder {
+  color: hsl(0, 0%, 80%);
+  opacity: 1;
+}
+
+.register-container .register-window input:focus,
+.login-container .login-window input:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.toogle-to-login,
+.toogle-to-register {
+    font-size: 0.6em;
+    color: hsl(0, 0%, 95%);
+}
+
+.toogle-to-login span,
+.toogle-to-register span {
+    color: hsl(187, 100%, 50%);
+    cursor: pointer;
+}
+
+.btn-signup,
+.btn-login {
+    margin-top: 10px;
+    font-size: 1.1em;
+    width: 13vw;
+}
+
+.register-error-text {
+    color: hsl(0, 95%, 59%);
+    font-size: 0.8em;
+}
+
+@media (max-width: 1200px) {
+    .register-container .register-window input,
+    .login-container .login-window input {
+        font-size: 0.6em;
+    }
+
+    .register-container .register-window h2,
+    .login-container .login-window h2 {
+        font-size: 2em;
+    }
+
+    .btn-signup,
+    .btn-login {
+        margin-top: 10px;
+        font-size: 0.9em;
+        width: 11vw;
+    }
+}
+
+@media (max-width: 992px) {
+    .register-container .register-window input,
+    .login-container .login-window input {
+        font-size: 0.55em;
+        width: 25vw;
+    }
+
+    .register-container .register-window h2,
+    .login-container .login-window h2 {
+        font-size: 1.5em;
+    }
+
+    .btn-signup,
+    .btn-login {
+        margin-top: 10px;
+        font-size: 0.75em;
+        width: 12vw;
+    }
+
+    .toogle-to-login,
+    .toogle-to-register {
+        font-size: 0.5em;
+    }
+}
+
+@media (max-width: 768px) {
+    .register-container .register-window,
+    .login-container .login-window {
+        gap: 8px;
+    }
+
+
+    .register-container .register-window input,
+    .login-container .login-window input {
+        font-size: 0.55em;
+        width: 25vw;
+    }
+
+    .register-container .register-window h2,
+    .login-container .login-window h2 {
+        font-size: 1.2em;
+    }
+
+    .btn-signup,
+    .btn-login {
+        margin-top: 10px;
+        font-size: 0.65em;
+        width: 15vw;
+    }
+
+    .toogle-to-login,
+    .toogle-to-register {
+        font-size: 0.4em;
+    }
+}
+
+@media (max-width: 576px) {
+    .register-container .register-window,
+    .login-container .login-window {
+        gap: 8px;
+    }
+
+        .register-container .register-window input,
+    .login-container .login-window input {
+        font-size: 0.55em;
+        width: 45vw;
+    }
+
+    .btn-signup,
+    .btn-login {
+        margin-top: 10px;
+        font-size: 0.65em;
+        width: 25vw;
+    }
+
+    .toogle-to-login,
+    .toogle-to-register {
+        font-size: 0.4em;
+    }
+
+    .info-input-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 15px 20px;
+}
+}
